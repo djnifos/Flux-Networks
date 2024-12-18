@@ -310,9 +310,9 @@ public abstract class TileFluxDevice extends BlockEntity implements IFluxDevice 
         Long energy = componentInput.get(FluxDataComponents.STORED_ENERGY);
 
         mNetworkID = configuration.networkId();
-        if (mNetwork.getNetworkID() != configuration.networkId()) {
+        /*if (mNetwork.getNetworkID() != configuration.networkId()) {
             this.onFirstTick();
-        }
+        }*/
         if (configuration.customName().isPresent()) {
             mCustomName = configuration.customName().get();
         }
