@@ -3,6 +3,7 @@ package sonar.fluxnetworks.register;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import sonar.fluxnetworks.FluxNetworks;
@@ -20,6 +21,9 @@ public class RegistryRecipes {
         helper.register(FLUX_STORAGE_RECIPE_KEY, FluxStorageRecipe.Serializer.INSTANCE);
         helper.register(CONFIG_WIPE_RECIPE_KEY, ConfigWipeRecipe.Serializer.INSTANCE);
     }
-
+    
+	public CraftingBookCategory category() {
+		return CraftingBookCategory.MISC;
+	}
     private RegistryRecipes() {}
 }
